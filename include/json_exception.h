@@ -12,7 +12,7 @@ class json_exception : public std::exception {
 public:
     json_exception(std::string const &message) : msg(message) {}
     virtual char const *what() const noexcept {
-        std::cerr << msg << std::endl;
+//        std::cerr << msg << std::endl;
         return msg.c_str();
     }
 

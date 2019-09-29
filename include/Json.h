@@ -96,6 +96,26 @@ public:
     }
 
 private:
+
+
+    char generateEscapeSequences(char symbol){
+	    std::set signs = {'b', 'f', 'n', 'r', 't', '\\'};
+	    if(symbol == 'b')
+	        return '\b';
+        if(symbol == 'f')
+            return '\f';
+        if(symbol == 'n')
+            return '\n';
+        if(symbol == 'r')
+            return '\r';
+        if(symbol == 't')
+            return '\t';
+        if(symbol == '\\')
+            return '\\';
+        else
+            throw json_exception("Lex_error : invalid character of escape-sequece\n");
+    }
+
     std::optional<std::string>
     lex_string(std::string &string) {
         std::string json_string = "";
@@ -125,8 +145,15 @@ private:
                     continue;
                 }
                 else{
-
-                    json_string += element;
+                    if(!haveBackSlash)
+                        json_string += element;
+                    else{
+                        std::set signs = {'b', 'f', 'n', 'r', 't', '/', '\\'};
+                        if(signs.find(element) != signs.end())
+                            json_string += generateEscapeSequences(element);
+                        else
+                            throw json_exception("Lex_error : invalid character of escape-sequece\n");
+                    }
                 }
             }
         }
@@ -274,7 +301,7 @@ inline std::string operator+(const std::string buf, std::any newInfo) {
 		result = buf + std::to_string(std::any_cast<float>(newInfo));
 	}
 	else if (newInfo.type() == typeid(std::unordered_map<std::string, std::any>)) {
-		result += buf + "{";
+		result += buf + "{\n";
 		std::unordered_map<std::string, std::any> tmp = std::any_cast<std::unordered_map<std::string, std::any>>(newInfo);
 		std::string tmpStr;
 		for (auto i : tmp) {
@@ -282,18 +309,18 @@ inline std::string operator+(const std::string buf, std::any newInfo) {
 			tmpStr += ",";
 		}
 		tmpStr.erase(tmpStr.size() - 1, 1); // delete last ','
-		result +=  tmpStr + "}";
+		result +=  tmpStr + "\n}";
 	}
 	else if (newInfo.type() == typeid(std::vector<std::any>)) {
 		std::vector<std::any> tmp = std::any_cast<std::vector<std::any>>(newInfo);
-		result += buf + "[" ;
+		result += buf + "[\n" ;
 		for (unsigned i = 0; i < tmp.size(); i++) {
 			result = result + tmp[i];
 			if (i != tmp.size() - 1) {
 				result += ",";
 			}
 		}
-		result += "]";
+		result += "\n]";
 	}
 	else if (newInfo.type() == typeid(bool)) {
 		//result = buf +  std::any_cast<bool>(newInfo);
@@ -335,26 +362,26 @@ inline std::ostream& operator<<(std::ostream& out, const std::any &elem) {
 	}
 	else if (elem.type() == typeid(std::unordered_map<std::string, std::any>)) {
 		std::unordered_map<std::string, std::any> tmp = std::any_cast<std::unordered_map<std::string, std::any>>(elem) ;
-		out << "{";
+		out << "{\n";
 		std::string tmpStr;
 		for (auto i : tmp) {
 			tmpStr += "\"" + i.first + "\":" + i.second;
 			tmpStr += ",";
 		}
 		tmpStr.erase(tmpStr.size() - 1, 1); // delete last ','
-		out << tmpStr + "}";
+		out << tmpStr + "\n}";
 
 	}
 	else if (elem.type() == typeid(std::vector<std::any>)) {
 		std::vector<std::any> tmp = std::any_cast<std::vector<std::any>>(elem);
-		out << "[";
+		out << "[\n";
 		for (unsigned i = 0; i < tmp.size(); i++) {
 			out << tmp[i];
 			if (i != tmp. size() - 1) {
 				out << ",";
 			}
 		}
-		out << "]";
+		out << "\n]";
 	}
 	else if (elem.type() == typeid(int)) {
 		out << std::to_string(std::any_cast<int>(elem));

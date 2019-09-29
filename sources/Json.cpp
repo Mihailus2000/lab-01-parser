@@ -1,7 +1,7 @@
 #include "Json.h"
 #include <fstream>
 #include <set>
-
+#include <iomanip>
 #include "json_exception.h"
 #include "Constants.h"
 
@@ -71,10 +71,10 @@ void Json::readAllElements()
 {
     std::cout << "\n---------------------------\n";
 	if (mode == OBJECT) {
-		std::cout << jsonObject;
+		std::cout <<  jsonObject;
 	}
 	else {
-		std::cout << jsonArray;
+		std::cout  << jsonArray;
 	}
 	std::cout << "\n";
 }
@@ -178,6 +178,8 @@ Json Json::parse_object(TokensType &tokens) {
         std::string json_key;
         if(tokens[0].type() == typeid(std::string)) {
             json_key = std::any_cast<std::string>(tokens[0]);
+            if(jsonObject.find(json_key) != jsonObject.end())
+                throw json_exception("Error : Key repeating in object\n");
             tokens.erase(tokens.begin(), tokens.begin()+1);
         }
         else
@@ -221,11 +223,9 @@ Json Json::parse_object(TokensType &tokens) {
 
 void Json::from_string(std::string Instring) {
     std::vector<std::any> tokens = lex(Instring);
-    std::cout << "\n##############\n\n";
-    std::cout << "start_string = " << Instring << std::endl;
-
-    for (auto i : tokens) {
-        std::cout << /*"|" <<*/ i << " ";
+    std::cout << "\nTOKENS: ";
+    for(auto element : tokens){
+        std::cout <<  element;
     }
     if(tokens[0].type() == typeid(char)) {
         if (std::any_cast<char>(tokens[0]) == JSON_LEFTBRACKET) {

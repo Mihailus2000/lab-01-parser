@@ -146,12 +146,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-01-parser/include/Constants.h">
-			<Option target="Json"/>
-		</Unit>
-		<Unit filename="/home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-01-parser/include/lexer.h">
-			<Option target="Json"/>
-		</Unit>
 		<Unit filename="/home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-01-parser/sources/Json.cpp">
 			<Option target="Json"/>
 		</Unit>

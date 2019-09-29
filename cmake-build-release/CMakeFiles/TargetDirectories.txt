@@ -1,0 +1,6 @@
+/home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-01-parser/cmake-build-release/CMakeFiles/rebuild_cache.dir
+/home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-01-parser/cmake-build-release/CMakeFiles/test.dir
+/home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-01-parser/cmake-build-release/CMakeFiles/edit_cache.dir
+/home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-01-parser/cmake-build-release/CMakeFiles/Json_parser.dir
+/home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-01-parser/cmake-build-release/CMakeFiles/Json_parser_TASK2.dir
+/home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-01-parser/cmake-build-release/CMakeFiles/tests.dir

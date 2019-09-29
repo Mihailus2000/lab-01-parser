@@ -65,39 +65,76 @@ CMAKE_SOURCE_DIR = /home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-01-parser
 CMAKE_BINARY_DIR = /home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-01-parser/cmake-build-debug
 
 #=============================================================================
-# Target rules for target CMakeFiles/Json.dir
+# Target rules for target CMakeFiles/Json_parser.dir
 
 # All Build rule for target.
-CMakeFiles/Json.dir/all:
-	$(MAKE) -f CMakeFiles/Json.dir/build.make CMakeFiles/Json.dir/depend
-	$(MAKE) -f CMakeFiles/Json.dir/build.make CMakeFiles/Json.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-01-parser/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target Json"
-.PHONY : CMakeFiles/Json.dir/all
+CMakeFiles/Json_parser.dir/all:
+	$(MAKE) -f CMakeFiles/Json_parser.dir/build.make CMakeFiles/Json_parser.dir/depend
+	$(MAKE) -f CMakeFiles/Json_parser.dir/build.make CMakeFiles/Json_parser.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-01-parser/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target Json_parser"
+.PHONY : CMakeFiles/Json_parser.dir/all
 
 # Include target in all.
-all: CMakeFiles/Json.dir/all
+all: CMakeFiles/Json_parser.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/Json.dir/rule: cmake_check_build_system
+CMakeFiles/Json_parser.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-01-parser/cmake-build-debug/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Json.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Json_parser.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-01-parser/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/Json.dir/rule
+.PHONY : CMakeFiles/Json_parser.dir/rule
 
 # Convenience name for target.
-Json: CMakeFiles/Json.dir/rule
+Json_parser: CMakeFiles/Json_parser.dir/rule
 
-.PHONY : Json
-
-# clean rule for target.
-CMakeFiles/Json.dir/clean:
-	$(MAKE) -f CMakeFiles/Json.dir/build.make CMakeFiles/Json.dir/clean
-.PHONY : CMakeFiles/Json.dir/clean
+.PHONY : Json_parser
 
 # clean rule for target.
-clean: CMakeFiles/Json.dir/clean
+CMakeFiles/Json_parser.dir/clean:
+	$(MAKE) -f CMakeFiles/Json_parser.dir/build.make CMakeFiles/Json_parser.dir/clean
+.PHONY : CMakeFiles/Json_parser.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/Json_parser.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/Json_parser_TASK2.dir
+
+# All Build rule for target.
+CMakeFiles/Json_parser_TASK2.dir/all: CMakeFiles/Json_parser.dir/all
+	$(MAKE) -f CMakeFiles/Json_parser_TASK2.dir/build.make CMakeFiles/Json_parser_TASK2.dir/depend
+	$(MAKE) -f CMakeFiles/Json_parser_TASK2.dir/build.make CMakeFiles/Json_parser_TASK2.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-01-parser/cmake-build-debug/CMakeFiles --progress-num=3,4 "Built target Json_parser_TASK2"
+.PHONY : CMakeFiles/Json_parser_TASK2.dir/all
+
+# Include target in all.
+all: CMakeFiles/Json_parser_TASK2.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/Json_parser_TASK2.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-01-parser/cmake-build-debug/CMakeFiles 4
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Json_parser_TASK2.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-01-parser/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/Json_parser_TASK2.dir/rule
+
+# Convenience name for target.
+Json_parser_TASK2: CMakeFiles/Json_parser_TASK2.dir/rule
+
+.PHONY : Json_parser_TASK2
+
+# clean rule for target.
+CMakeFiles/Json_parser_TASK2.dir/clean:
+	$(MAKE) -f CMakeFiles/Json_parser_TASK2.dir/build.make CMakeFiles/Json_parser_TASK2.dir/clean
+.PHONY : CMakeFiles/Json_parser_TASK2.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/Json_parser_TASK2.dir/clean
 
 .PHONY : clean
 
@@ -105,10 +142,10 @@ clean: CMakeFiles/Json.dir/clean
 # Target rules for target CMakeFiles/tests.dir
 
 # All Build rule for target.
-CMakeFiles/tests.dir/all: CMakeFiles/Json.dir/all
+CMakeFiles/tests.dir/all: CMakeFiles/Json_parser.dir/all
 	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/depend
 	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-01-parser/cmake-build-debug/CMakeFiles --progress-num=3,4,5,6 "Built target tests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-01-parser/cmake-build-debug/CMakeFiles --progress-num=5,6,7,8 "Built target tests"
 .PHONY : CMakeFiles/tests.dir/all
 
 # Include target in all.

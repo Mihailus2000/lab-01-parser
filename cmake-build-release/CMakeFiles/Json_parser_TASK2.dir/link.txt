@@ -1,0 +1,1 @@
+/usr/bin/c++   -pedantic -Werror -Wall -Wextra -Wno-unused-command-line-argument -Wshadow -Wnon-virtual-dtor -O3 -DNDEBUG   CMakeFiles/Json_parser_TASK2.dir/task_2/main.cpp.o  -o Json_parser_TASK2 libJson_parser.a 

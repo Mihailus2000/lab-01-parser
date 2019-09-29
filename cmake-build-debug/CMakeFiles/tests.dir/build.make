@@ -109,7 +109,7 @@ tests: CMakeFiles/tests.dir/tests/testArray.cpp.o
 tests: CMakeFiles/tests.dir/tests/testObject.cpp.o
 tests: CMakeFiles/tests.dir/tests/testJson.cpp.o
 tests: CMakeFiles/tests.dir/build.make
-tests: libJsond.a
+tests: libJson_parserd.a
 tests: /home/mihailus/.hunter/_Base/70287b1/3ed7151/b8f46c4/Install/lib/libgtest.a
 tests: /home/mihailus/.hunter/_Base/70287b1/3ed7151/b8f46c4/Install/lib/libgtest_main.a
 tests: CMakeFiles/tests.dir/link.txt

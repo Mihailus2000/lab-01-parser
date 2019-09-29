@@ -6,7 +6,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 
 option(BUILD_COVERAGE "Build coverage" OFF)
-
+option(BUILD_TASK2 "Build 2 task" ON)
+option(BUILD_TASK3 "Build 3 task" OFF)
 
 set(
   HUNTER_CACHE_SERVERS
@@ -21,20 +22,44 @@ huntergate(
   SHA1 "70287b1ffa810ee4e952052a9adff9b4856d0d54"
 )
 
-project(Json)
-
+project(Json_parser)
 string(APPEND CMAKE_CXX_FLAGS " -pedantic -Werror -Wall -Wextra")
 string(APPEND CMAKE_CXX_FLAGS " -Wno-unused-command-line-argument")
 string(APPEND CMAKE_CXX_FLAGS " -Wshadow -Wnon-virtual-dtor")
 
 hunter_add_package(GTest)
 find_package(GTest CONFIG REQUIRED)
-find_package(Threads)
+#find_package(Threads)
 
-add_library(${PROJECT_NAME} STATIC
+
+
+add_library(${PROJECT_NAME}
+        STATIC
         ${CMAKE_CURRENT_SOURCE_DIR}/sources/Json.cpp
-        include/lexer.h include/Constants.h)
+)
 
+add_executable(
+        tests
+        ${CMAKE_CURRENT_SOURCE_DIR}/tests/testArray.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/tests/testObject.cpp
+#        ${CMAKE_CURRENT_SOURCE_DIR}/sources/main.cpp
+#        ${CMAKE_CURRENT_SOURCE_DIR}/task_3/main.cpp
+        tests/testJson.cpp
+)
+
+
+target_include_directories(
+        ${PROJECT_NAME}
+        PUBLIC
+        ${CMAKE_CURRENT_SOURCE_DIR}/include
+)
+
+target_include_directories(
+        tests
+        PUBLIC
+        ${CMAKE_CURRENT_SOURCE_DIR}/include
+        ${GTEST_ROOT}/include
+)
 
 find_library(
         GTEST_LOCAL_LIB
@@ -47,45 +72,66 @@ find_library(
         PATHS ${GTEST_ROOT}/lib
 )
 
-
-
-add_executable(
-  tests
-        ${CMAKE_CURRENT_SOURCE_DIR}/tests/testArray.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/tests/testObject.cpp
-#  ${CMAKE_CURRENT_SOURCE_DIR}/sources/Json.cpp
-#  ${CMAKE_CURRENT_SOURCE_DIR}/  include/lexer.h
-#  ${CMAKE_CURRENT_SOURCE_DIR}/sources/source.cpp
-        tests/testJson.cpp)
-
-target_include_directories(
-        ${PROJECT_NAME}
-  PUBLIC
-        ${CMAKE_CURRENT_SOURCE_DIR}/include
-)
-
-target_include_directories(
-        tests
-  PUBLIC
-        ${CMAKE_CURRENT_SOURCE_DIR}/include
-        ${GTEST_ROOT}/include
-
-
-)
-
-
-
-
 target_link_libraries(
-  tests
-  ${PROJECT_NAME}
-  ${GTEST_LOCAL_LIB}
-  ${GTEST_LOCAL_LIB_MAIN}
-  ${CMAKE_THREAD_LIBS_INIT}
+        tests
+        ${PROJECT_NAME}
+        ${GTEST_LOCAL_LIB}
+        ${GTEST_LOCAL_LIB_MAIN}
+        ${CMAKE_THREAD_LIBS_INIT}
 )
+
+
+
+
+
+
+
 
 enable_testing()
 add_test(NAME unit_tests COMMAND tests) 
+
+if (BUILD_TASK2)
+  message("!!!!!!!!!!!!!I AM AT TASK2!!!!!!!!!!!!!")
+  set(TASK2 ${PROJECT_NAME}_TASK2)
+  add_executable(
+          ${TASK2}
+          ${CMAKE_CURRENT_SOURCE_DIR}/task_2/main.cpp
+  )
+  target_include_directories(
+          ${TASK2}
+          PUBLIC
+            ${CMAKE_CURRENT_SOURCE_DIR}/include
+  )
+  target_link_libraries(
+          ${TASK2}
+          ${PROJECT_NAME}
+  )
+endif()
+
+if (BUILD_TASK3)
+  message("!!!!!!!!!!!!!I AM AT TASK3!!!!!!!!!!!!!")
+  hunter_add_package(nlohmann_json) # TODO Add to the task 3
+  find_package(nlohmann_json CONFIG REQUIRED)
+
+  set(TASK3 ${PROJECT_NAME}_TASK3)
+
+  add_executable(
+          ${TASK3}
+            ${CMAKE_CURRENT_SOURCE_DIR}/task_3/main.cpp
+  )
+
+  target_include_directories(
+          ${TASK3}
+            PUBLIC
+              ${CMAKE_CURRENT_SOURCE_DIR}/include
+  )
+
+  target_link_libraries(
+          ${TASK3}
+            ${PROJECT_NAME}
+            nlohmann_json::nlohmann_json
+  )
+endif ()
 
 if(BUILD_COVERAGE)
   set(ENABLE_COVERAGE ON CACHE BOOL "Enable coverage build." FORCE)

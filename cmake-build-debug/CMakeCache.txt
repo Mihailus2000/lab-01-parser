@@ -17,6 +17,12 @@
 //Build coverage
 BUILD_COVERAGE:BOOL=OFF
 
+//Build 2 task
+BUILD_TASK2:BOOL=ON
+
+//Build 3 task
+BUILD_TASK3:BOOL=OFF
+
 //Path to a program.
 CMAKE_AR:FILEPATH=/usr/bin/ar
 
@@ -153,7 +159,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=Json
+CMAKE_PROJECT_NAME:STATIC=Json_parser
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
@@ -242,10 +248,10 @@ HUNTER_STATUS_PRINT:BOOL=ON
 HUNTER_TLS_VERIFY:BOOL=ON
 
 //Value Computed by CMake
-Json_BINARY_DIR:STATIC=/home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-01-parser/cmake-build-debug
+Json_parser_BINARY_DIR:STATIC=/home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-01-parser/cmake-build-debug
 
 //Value Computed by CMake
-Json_SOURCE_DIR:STATIC=/home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-01-parser
+Json_parser_SOURCE_DIR:STATIC=/home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-01-parser
 
 //Path to a program.
 ProcessorCount_cmd_getconf:FILEPATH=/usr/bin/getconf
