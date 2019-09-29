@@ -1,0 +1,5 @@
+/home/mihailus/Mihailus2000/IU8-33/LR1/lab-01-parser/CMakeFiles/edit_cache.dir
+/home/mihailus/Mihailus2000/IU8-33/LR1/lab-01-parser/CMakeFiles/test.dir
+/home/mihailus/Mihailus2000/IU8-33/LR1/lab-01-parser/CMakeFiles/rebuild_cache.dir
+/home/mihailus/Mihailus2000/IU8-33/LR1/lab-01-parser/CMakeFiles/Json.dir
+/home/mihailus/Mihailus2000/IU8-33/LR1/lab-01-parser/CMakeFiles/tests.dir

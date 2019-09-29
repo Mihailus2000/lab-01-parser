@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/mihailus/Mihailus2000/IU8-33/LR1/lab-01-parser/sources/Json.cpp
+Json.h
+/home/mihailus/Mihailus2000/IU8-33/LR1/lab-01-parser/sources/Json.h
+fstream
+-
+set
+-
+json_exception.h
+/home/mihailus/Mihailus2000/IU8-33/LR1/lab-01-parser/sources/json_exception.h
+
+include/Json.h
+iostream
+-
+string
+-
+any
+-
+unordered_map
+-
+stack
+-
+experimental/filesystem
+-
+set
+-
+json_exception.h
+include/json_exception.h
+
+include/json_exception.h
+exception
+-
+iostream
+-
+

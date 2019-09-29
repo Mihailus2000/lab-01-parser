@@ -3,7 +3,10 @@ cmake_minimum_required(VERSION 3.4)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+
+
 option(BUILD_COVERAGE "Build coverage" OFF)
+
 
 set(
   HUNTER_CACHE_SERVERS
@@ -26,12 +29,11 @@ string(APPEND CMAKE_CXX_FLAGS " -Wshadow -Wnon-virtual-dtor")
 
 hunter_add_package(GTest)
 find_package(GTest CONFIG REQUIRED)
+find_package(Threads)
 
 add_library(${PROJECT_NAME} STATIC
-  ${CMAKE_CURRENT_SOURCE_DIR}/sources/source.cpp
-  ${CMAKE_CURRENT_SOURCE_DIR}/sources/Json.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/sources/Json.cpp
         include/lexer.h include/Constants.h)
-
 
 
 find_library(
@@ -49,11 +51,12 @@ find_library(
 
 add_executable(
   tests
-  ${CMAKE_CURRENT_SOURCE_DIR}/tests/test.cpp
-  ${CMAKE_CURRENT_SOURCE_DIR}/sources/Json.cpp
-  ${CMAKE_CURRENT_SOURCE_DIR}/  include/lexer.h
-  ${CMAKE_CURRENT_SOURCE_DIR}/sources/source.cpp
-)
+        ${CMAKE_CURRENT_SOURCE_DIR}/tests/testArray.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/tests/testObject.cpp
+#  ${CMAKE_CURRENT_SOURCE_DIR}/sources/Json.cpp
+#  ${CMAKE_CURRENT_SOURCE_DIR}/  include/lexer.h
+#  ${CMAKE_CURRENT_SOURCE_DIR}/sources/source.cpp
+        tests/testJson.cpp)
 
 target_include_directories(
         ${PROJECT_NAME}
@@ -69,13 +72,16 @@ target_include_directories(
 
 
 )
-target_link_libraries(tests pthread)
+
+
+
 
 target_link_libraries(
   tests
   ${PROJECT_NAME}
   ${GTEST_LOCAL_LIB}
   ${GTEST_LOCAL_LIB_MAIN}
+  ${CMAKE_THREAD_LIBS_INIT}
 )
 
 enable_testing()

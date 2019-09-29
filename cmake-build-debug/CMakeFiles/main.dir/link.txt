@@ -1,0 +1,1 @@
+/usr/bin/c++   -pedantic -Werror -Wall -Wextra -Wno-unused-command-line-argument -Wshadow -Wnon-virtual-dtor -g   CMakeFiles/main.dir/sources/main.cpp.o  -o main libJson_libd.a 
