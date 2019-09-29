@@ -227,6 +227,7 @@ void Json::from_string(std::string Instring) {
     for(auto element : tokens){
         std::cout <<  element;
     }
+    std::cout << "\n";
     if(tokens[0].type() == typeid(char)) {
         if (std::any_cast<char>(tokens[0]) == JSON_LEFTBRACKET) {
             mode = ARRAY;

@@ -1,20 +1,20 @@
 Determining if the pthread_create exist failed with the following output:
 Change Dir: /home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-01-parser/cmake-build-release/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_1c88e/fast 
-/usr/bin/make -f CMakeFiles/cmTC_1c88e.dir/build.make CMakeFiles/cmTC_1c88e.dir/build
+Run Build Command(s):/usr/bin/make cmTC_02054/fast 
+/usr/bin/make -f CMakeFiles/cmTC_02054.dir/build.make CMakeFiles/cmTC_02054.dir/build
 make[1]: вход в каталог «/home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-01-parser/cmake-build-release/CMakeFiles/CMakeTmp»
-Building C object CMakeFiles/cmTC_1c88e.dir/CheckSymbolExists.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_1c88e.dir/CheckSymbolExists.c.o   -c /home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-01-parser/cmake-build-release/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_1c88e
-/opt/clion-2019.2.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1c88e.dir/link.txt --verbose=1
-/usr/bin/cc      CMakeFiles/cmTC_1c88e.dir/CheckSymbolExists.c.o  -o cmTC_1c88e 
-/usr/bin/ld: CMakeFiles/cmTC_1c88e.dir/CheckSymbolExists.c.o: в функции «main»:
+Building C object CMakeFiles/cmTC_02054.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_02054.dir/CheckSymbolExists.c.o   -c /home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-01-parser/cmake-build-release/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_02054
+/opt/clion-2019.2.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_02054.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_02054.dir/CheckSymbolExists.c.o  -o cmTC_02054 
+/usr/bin/ld: CMakeFiles/cmTC_02054.dir/CheckSymbolExists.c.o: в функции «main»:
 CheckSymbolExists.c:(.text+0x1b): неопределённая ссылка на «pthread_create»
 collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_1c88e.dir/build.make:87: cmTC_1c88e] Ошибка 1
+make[1]: *** [CMakeFiles/cmTC_02054.dir/build.make:87: cmTC_02054] Ошибка 1
 make[1]: выход из каталога «/home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-01-parser/cmake-build-release/CMakeFiles/CMakeTmp»
-make: *** [Makefile:121: cmTC_1c88e/fast] Ошибка 2
+make: *** [Makefile:121: cmTC_02054/fast] Ошибка 2
 
 File /home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-01-parser/cmake-build-release/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
 /* */

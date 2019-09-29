@@ -6,7 +6,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 
 option(BUILD_COVERAGE "Build coverage" OFF)
-option(BUILD_TASK2 "Build 2 task" ON)
+option(BUILD_TASK2 "Build 2 task" OFF)
 option(BUILD_TASK3 "Build 3 task" OFF)
 
 set(
@@ -110,7 +110,7 @@ endif()
 
 if (BUILD_TASK3)
   message("!!!!!!!!!!!!!I AM AT TASK3!!!!!!!!!!!!!")
-  hunter_add_package(nlohmann_json) # TODO Add to the task 3
+  hunter_add_package(nlohmann_json)
   find_package(nlohmann_json CONFIG REQUIRED)
 
   set(TASK3 ${PROJECT_NAME}_TASK3)
