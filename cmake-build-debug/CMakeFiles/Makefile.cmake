@@ -226,5 +226,6 @@ set(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/Json_parser.dir/DependInfo.cmake"
+  "CMakeFiles/Json_parser_TASK2.dir/DependInfo.cmake"
   "CMakeFiles/tests.dir/DependInfo.cmake"
   )

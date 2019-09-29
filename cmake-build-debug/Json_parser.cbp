@@ -95,6 +95,54 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-01-parser/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="Json_parser_TASK2">
+				<Option output="/home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-01-parser/cmake-build-debug/Json_parser_TASK2" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-01-parser/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-01-parser/include"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-01-parser/cmake-build-debug/Makefile&quot;  VERBOSE=1 Json_parser_TASK2"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-01-parser/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-01-parser/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-01-parser/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Json_parser_TASK2/fast">
+				<Option output="/home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-01-parser/cmake-build-debug/Json_parser_TASK2" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-01-parser/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-01-parser/include"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-01-parser/cmake-build-debug/Makefile&quot;  VERBOSE=1 Json_parser_TASK2/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-01-parser/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-01-parser/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-01-parser/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="tests">
 				<Option output="/home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-01-parser/cmake-build-debug/tests" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-01-parser/cmake-build-debug"/>
@@ -148,6 +196,9 @@
 		</Build>
 		<Unit filename="/home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-01-parser/sources/Json.cpp">
 			<Option target="Json_parser"/>
+		</Unit>
+		<Unit filename="/home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-01-parser/task_2/main.cpp">
+			<Option target="Json_parser_TASK2"/>
 		</Unit>
 		<Unit filename="/home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-01-parser/tests/testArray.cpp">
 			<Option target="tests"/>

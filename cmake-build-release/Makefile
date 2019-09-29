@@ -135,6 +135,19 @@ Json_parser/fast:
 .PHONY : Json_parser/fast
 
 #=============================================================================
+# Target rules for targets named Json_parser_TASK2
+
+# Build rule for target.
+Json_parser_TASK2: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Json_parser_TASK2
+.PHONY : Json_parser_TASK2
+
+# fast build rule for target.
+Json_parser_TASK2/fast:
+	$(MAKE) -f CMakeFiles/Json_parser_TASK2.dir/build.make CMakeFiles/Json_parser_TASK2.dir/build
+.PHONY : Json_parser_TASK2/fast
+
+#=============================================================================
 # Target rules for targets named tests
 
 # Build rule for target.
@@ -173,6 +186,33 @@ sources/Json.s: sources/Json.cpp.s
 sources/Json.cpp.s:
 	$(MAKE) -f CMakeFiles/Json_parser.dir/build.make CMakeFiles/Json_parser.dir/sources/Json.cpp.s
 .PHONY : sources/Json.cpp.s
+
+task_2/main.o: task_2/main.cpp.o
+
+.PHONY : task_2/main.o
+
+# target to build an object file
+task_2/main.cpp.o:
+	$(MAKE) -f CMakeFiles/Json_parser_TASK2.dir/build.make CMakeFiles/Json_parser_TASK2.dir/task_2/main.cpp.o
+.PHONY : task_2/main.cpp.o
+
+task_2/main.i: task_2/main.cpp.i
+
+.PHONY : task_2/main.i
+
+# target to preprocess a source file
+task_2/main.cpp.i:
+	$(MAKE) -f CMakeFiles/Json_parser_TASK2.dir/build.make CMakeFiles/Json_parser_TASK2.dir/task_2/main.cpp.i
+.PHONY : task_2/main.cpp.i
+
+task_2/main.s: task_2/main.cpp.s
+
+.PHONY : task_2/main.s
+
+# target to generate assembly for a file
+task_2/main.cpp.s:
+	$(MAKE) -f CMakeFiles/Json_parser_TASK2.dir/build.make CMakeFiles/Json_parser_TASK2.dir/task_2/main.cpp.s
+.PHONY : task_2/main.cpp.s
 
 tests/testArray.o: tests/testArray.cpp.o
 
@@ -265,10 +305,14 @@ help:
 	@echo "... test"
 	@echo "... edit_cache"
 	@echo "... Json_parser"
+	@echo "... Json_parser_TASK2"
 	@echo "... tests"
 	@echo "... sources/Json.o"
 	@echo "... sources/Json.i"
 	@echo "... sources/Json.s"
+	@echo "... task_2/main.o"
+	@echo "... task_2/main.i"
+	@echo "... task_2/main.s"
 	@echo "... tests/testArray.o"
 	@echo "... tests/testArray.i"
 	@echo "... tests/testArray.s"
