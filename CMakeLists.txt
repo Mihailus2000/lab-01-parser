@@ -6,7 +6,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 
 option(BUILD_COVERAGE "Build coverage" OFF)
-option(BUILD_TASK2 "Build 2 task" ON)
+option(BUILD_TASK2 "Build 2 task" OFF)
 option(BUILD_TASK3 "Build 3 task" OFF)
 
 set(

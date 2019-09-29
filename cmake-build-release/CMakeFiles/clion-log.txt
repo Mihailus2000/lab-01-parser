@@ -25,7 +25,6 @@
 -- Check if compiler accepts -pthread
 -- Check if compiler accepts -pthread - yes
 -- Found Threads: TRUE  
-!!!!!!!!!!!!!I AM AT TASK2!!!!!!!!!!!!!
 -- Configuring done
 -- Generating done
 -- Build files have been written to: /home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-01-parser/cmake-build-release
