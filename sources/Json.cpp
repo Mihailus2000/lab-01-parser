@@ -15,7 +15,8 @@ Json::Json(const std::string& s) {
 
 Json::~Json()
 {
-
+    jsonObject.clear();
+    jsonArray.clear();
 }
 
 bool Json::is_array() const
