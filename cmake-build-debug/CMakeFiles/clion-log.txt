@@ -1,9 +1,0 @@
-/opt/clion-2019.2.2/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-01-parser
--- [hunter] Calculating Toolchain-SHA1
--- [hunter] Calculating Config-SHA1
--- [hunter] HUNTER_ROOT: /home/mihailus/.hunter
--- [hunter] [ Hunter-ID: 70287b1 | Toolchain-ID: 3ed7151 | Config-ID: b8f46c4 ]
--- [hunter] GTEST_ROOT: /home/mihailus/.hunter/_Base/70287b1/3ed7151/b8f46c4/Install (ver.: 1.8.1)
--- Configuring done
--- Generating done
--- Build files have been written to: /home/mihailus/Mihailus2000/MGTU_2_1_АЯ/lab-01-parser/cmake-build-debug

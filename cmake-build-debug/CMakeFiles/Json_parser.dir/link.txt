@@ -1,2 +1,0 @@
-/usr/bin/ar qc libJson_parserd.a  CMakeFiles/Json_parser.dir/sources/Json.cpp.o
-/usr/bin/ranlib libJson_parserd.a
