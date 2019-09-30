@@ -7,8 +7,8 @@
 #include <stack>
 #include <experimental/filesystem>
 #include <set>
-#include "json_exception.h"
-#include "Constants.h"
+#include "json_exception.hpp"
+#include "Constants.hpp"
 namespace fs = std::experimental::filesystem;
 using TokensType = std::vector<std::any>;
 using namespace JsonConstants;

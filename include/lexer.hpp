@@ -6,9 +6,9 @@
 #include <tuple>
 #include <string>
 #include <vector>
-#include "Constants.h"
-#include "json_exception.h"
-#include "Json.h"
+#include "Constants.hpp"
+#include "json_exception.hpp"
+#include "Json.hpp"
 
 using namespace JsonConstants;
 
