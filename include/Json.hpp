@@ -27,7 +27,7 @@ public:
 	explicit Json() = default;
 	
 	// Деструктор
-	~Json();
+	~Json() = default;
 
 	int numOfMapElem() {
 		return jsonObject.size();
