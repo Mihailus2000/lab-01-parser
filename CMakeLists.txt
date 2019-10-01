@@ -61,31 +61,13 @@ target_include_directories(
         ${GTEST_ROOT}/include
 )
 
-find_library(
-        GTEST_LOCAL_LIB
-        NAMES gtest
-        PATHS ${GTEST_ROOT}/lib
-)
-find_library(
-        GTEST_LOCAL_LIB_MAIN
-        NAMES gtest_main
-        PATHS ${GTEST_ROOT}/lib
-)
-
 target_link_libraries(
         tests
         ${PROJECT_NAME}
-        ${GTEST_LOCAL_LIB}
-        ${GTEST_LOCAL_LIB_MAIN}
+        GTest::gtest
+        GTest::main
         ${CMAKE_THREAD_LIBS_INIT}
 )
-
-
-
-
-
-
-
 
 enable_testing()
 add_test(NAME unit_tests COMMAND tests) 
